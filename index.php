@@ -18,6 +18,12 @@
       </button>
     </form>
   </div>
+  <div class="f3">
+    <form method="post" action=''>
+      <button type="submit" class="b3" name="ViewReport" value="VIEW REPORT">VIEW REPORT
+      </button>
+    </form>
+  </div>
 </div>
 <?php
   if (isset($_POST['addSubstructure']))
@@ -27,6 +33,10 @@
    if (isset($_POST['dailyReport']))
    {
      header("Location: dailyReport.html");
+   }
+   if (isset($_POST['ViewReport']))
+   {
+     header("Location: viewReport.html");
    }
 ?>
 
