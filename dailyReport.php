@@ -31,10 +31,11 @@ if (!$result3) {
 $row3=mysqli_fetch_array($result3);
 $idealWork=$row3['IdealWork'];
 
-$progress=(($workDone-$idealWork)*100)/$idealWork;
+//$progress=(($workDone-$idealWork)*100)/$idealWork;
+$progress=100*$workDone/$idealWork;
 $query4="update workreport set Progress='$progress'
 where SubstructureID='$id' and Date='$Date' ";
-
+echo "Ideal work : $idealWork Workdone: $workDone ok ok ";
 $result4=mysqli_query($conn,$query4);
 if (!$result4) {
     printf("Error: %s\n", mysqli_error($conn));
