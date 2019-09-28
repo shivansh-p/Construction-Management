@@ -1,20 +1,38 @@
 <html>
 <head>
 <title>CONMAN</title>
-
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="static/css/materialize.min.css"  media="screen,projection"/>
+        <link rel="stylesheet" type="text/css" href="static/prelogin.css">
  <link rel="stylesheet"  href="substructure.css">
 </head>
 <body>
-  <h1>NEW SUBSTRUCTURE</h1>
-<div class="form">
-  <form action ="addSubstructure.php" method="post" class="addSubstructure">
-	<input type="text" name="Name" placeholder="Name"><br>
-	<input type="date" name="Start_Date" placeholder="Enter Start date"><br>
-	<input type="text" name="Total_Days" placeholder="Enter Total days"><br>
-  <br>
-	<button type="submit">ADD</button>
-  </form>
+
+<div class="for">
+  <div class="container">
+        <div class="row">
+        <!--div class="col s12 m6"-->
+          <div class="card white darken-1">
+            <div class="card-content black-text">
+              <span class="card-title">NEW SUBSTRUCTURE</span>
+                <form action ="addSubstructure.php" method="post" class="addSubstructure">
+              	<input type="text" name="Name" placeholder="Name"><br>
+              	<input type="date" name="Start_Date" placeholder="Enter Start date"><br>
+              	<input type="text" name="Total_Days" placeholder="Enter Total days"><br>
+                <br>
+              </div>
+              <div class="card-action">
+              	<button type="submit" class="button">ADD</button>
+              </div>
+                </form>
+              </div>
+            <!--/div-->
+          </div>
+          </div>
+      </div>
 </div>
+
 
 </body>
 </html>

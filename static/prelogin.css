@@ -1,3 +1,12 @@
+button {
+      background-color: #ffab40;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
 .btn {
       border: 2px solid black;
       background-color: white;
@@ -7,7 +16,7 @@
       cursor: pointer;
     }
     .button {
-    background-color: #4CAF50;
+    background-color: #ffab40;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -22,13 +31,18 @@
 
     /* Green */
     .success {
-      border-color: #4CAF50;
+      border-color: #ffab40;
       color: green;
     }
 
     .success:hover {
-      background-color: #4CAF50;
+      background-color: #ffab40;
       color: white;
+    }
+    .for{
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
     }
     .container1 {
       padding: 10px;
