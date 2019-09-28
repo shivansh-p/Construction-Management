@@ -21,6 +21,14 @@ if (!$result2) {
 }
 $row = mysqli_fetch_array($result2);
 $id= $row['SubstructureID'];
+
+$query4="insert into progressreport ( SubstructureID )
+	VALUES ('$id' )";
+$result4= mysqli_query($conn, $query4);
+if (!$result4) {
+    printf("Error: %s\n", mysqli_error($conn));
+    exit();
+}
 //echo  $row['SubstructureID'] ;
 //echo "$result2";
 //  $date = strtotime("+1 day", strtotime("2007-02-28"));

@@ -31,7 +31,7 @@ if (!$result3) {
 $row3=mysqli_fetch_array($result3);
 $idealWork=$row3['IdealWork'];
 
-$progress=($workDone-$idealWork)*100/$idealWork;
+$progress=(($workDone-$idealWork)*100)/$idealWork;
 $query4="update workreport set Progress='$progress'
 where SubstructureID='$id' and Date='$Date' ";
 
@@ -41,6 +41,16 @@ if (!$result4) {
     exit();
 }
 
+$query5="select Overall_Progress from progressreport where SubstructureID='$id' ";
+$result5=mysqli_query($conn,$query5);
+$row5=mysqli_fetch_array($result5);
+$cumulative=$row5['Overall_Progress'];
+$cumulative=$cumulative+$workDone;
+
+$query6="update progressreport set Overall_Progress='$cumulative'
+where SubstructureID='$id' ";
+
+$result6=mysqli_query($conn,$query6);
 echo "$progress";
 mysqli_close($conn);
 ?>
