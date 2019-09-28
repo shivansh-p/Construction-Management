@@ -1,6 +1,14 @@
 <?php
 
 include 'DatabaseConnection.php';
+?>
+<html>
+  <head>
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+</html>
+<?php
+
 
 $Name=$_POST['substructurename'];
 
@@ -10,6 +18,14 @@ $result1=mysqli_query($conn,$query1);
 $row=mysqli_fetch_array($result1);
 $id=$row['SubstructureID'];
 
+$query2="select Overall_Progress from progressreport where SubstructureID='$id' ";
+$result2=mysqli_query($conn,$query2);
+$row2=mysqli_fetch_array($result2);
+$pro=$row2['Overall_Progress'];
+
+echo "<div class='c'>";
+echo "Substructure Total Progress - ". $pro ."%";
+echo "</div>";
 $query="select * from workreport where SubstructureID='$id' ";
 $result=mysqli_query($conn,$query);
 
