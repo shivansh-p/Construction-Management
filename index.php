@@ -1,44 +1,57 @@
 <html>
 <head>
 <title>CONMAN</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="static/css/materialize.min.css"  media="screen,projection"/>
+        <link rel="stylesheet" type="text/css" href="static/prelogin.css">
 
-<link rel="stylesheet"  href="main.css">
 </head>
 <body>
-<div class="f">
-  <div class="f1">
-  <form method="post" action=''>
-    <button type="submit" class="b1" name="addSubstructure" value="ADD SUBSTRUCTURE">ADD SUBSTRUCTURE
-    </button>
-  </form>
+  <div class"a1">
+    <h3>CONSTRUCTION MANAGEMENT</h3>
   </div>
-  <div class="f2">
-    <form method="post" action=''>
-      <button type="submit" class="b2" name="dailyReport" value="DAILY REPORT">DAILY REPORT
-      </button>
-    </form>
+  <div class="a">
+    <p><em><h4>"Manage all projects and substructures"</h4></em></p>
   </div>
-  <div class="f3">
-    <form method="post" action=''>
-      <button type="submit" class="b3" name="ViewReport" value="VIEW REPORT">VIEW REPORT
-      </button>
-    </form>
-  </div>
-</div>
-<?php
-  if (isset($_POST['addSubstructure']))
-{
-   header("Location: addSubstructure.html");
-}
-   if (isset($_POST['dailyReport']))
-   {
-     header("Location: dailyReport.html");
-   }
-   if (isset($_POST['ViewReport']))
-   {
-     header("Location: viewReport.html");
-   }
-?>
+
+  <div class="container">
+        <div class="row">
+        <div class="col s6 m6">
+          <div class="card white darken-1">
+            <div class="card-content black-text">
+              <span class="card-title">Want to add a new Substructure? </span>
+            </div>
+            <div class="card-action">
+              <a href="addSubstructure.html"><b>Click here to Add Substructure</b></a>
+            </div>
+          </div>
+        </div>
+        <div class="col s6 m6">
+          <div class="card white darken-1">
+            <div class="card-content black-text">
+              <span class="card-title">Report today's progress</span>
+            </div>
+            <div class="card-action">
+              <a href="dailyReport.html"><b>Click here to give daily Report</b></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="col s12 m6">
+          <div class="card white darken-1">
+            <div class="card-content black-text">
+              <span class="card-title">Want to view report? </span>
+            </div>
+            <div class="card-action">
+              <a href="viewReport.html"><b>If YES, Click here.</b></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
 </body>
 </html>

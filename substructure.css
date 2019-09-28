@@ -1,6 +1,11 @@
 .form input[type=text]:focus {
   background-color: lightblue;
 }
+h1 {
+  color: blue;
+  font-family: verdana;
+  font-size: 300%;
+}
 input[type=button], input[type=submit], input[type=reset] {
   background-color: #4CAF50;
   border: none;
