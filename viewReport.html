@@ -1,15 +1,33 @@
 <html>
     <head>
-
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+           <!--Import materialize.css-->
+              <link type="text/css" rel="stylesheet" href="static/css/materialize.min.css"  media="screen,projection"/>
+              <link rel="stylesheet" type="text/css" href="static/prelogin.css">
     </head>
     <body>
-        <h1>VIEW REPORT</h1>
-        <div class="form">
-            <form action ="viewReport.php" method="post" class="viewReport">
-                <input type="text" name="substructurename" placeholder="Substructure Name"><br>
-            <br>
-                <button type="submit">VIEW</button>
-            </form>
+    <div class="for">
+      <div class="container">
+            <div class="row">
+
+              <div class="card white darken-1">
+                <div class="card-content black-text">
+                  <span class="card-title">REPORT</span>
+                  <div class="form">
+                      <form action ="viewReport.php" method="post" class="viewReport">
+                          <input type="text" name="substructurename" placeholder="Substructure Name"><br>
+                      <br>
+                  </div>
+                  <div class="card-action">
+                          <button type="submit">VIEW</button>
+                      </form>
+                  </div>
+                </div>
+              </div>
+              </div>
         </div>
+    </div>
+
+
     </body>
 </html>

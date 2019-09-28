@@ -2,18 +2,38 @@
 <html>
   <head>
     <title>Daily Report Input</title>
-    <link rel="stylesheet" href="substructure.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+         <!--Import materialize.css-->
+            <link type="text/css" rel="stylesheet" href="static/css/materialize.min.css"  media="screen,projection"/>
+            <link rel="stylesheet" type="text/css" href="static/prelogin.css">
   </head>
   <body>
-      <h1>DAILY REPORT</h1>
-  <div class="form">
-    <form class="Daily Report" action="dailyReport.php" method="post">
-      <input type="text" name="substructureInput" placeholder="Substructure Name" ><br>
-      <input type="date" name="DateInput" placeholder="Date of Input"><br>
-      <input type="number" step="any" name="ActualWork" placeholder="Work Done(in percentage)"><br>
-      <br>
-      <button type="sumbit" name="button">Submit</button>
-    </form>
+    <div class="for">
+      <div class="container">
+            <div class="row">
+
+              <div class="card white darken-1">
+              <div class="card-content black-text">
+                  <span class="card-title">DAILY REPORT</span>
+
+                  <form class="Daily Report" action="dailyReport.php" method="post">
+                    <input type="text" name="substructureInput" placeholder="Substructure Name" ><br>
+                    <input type="date" name="DateInput" placeholder="Date of Input"><br>
+                    <input type="number" step="any" name="ActualWork" placeholder="Work Done(in percentage)"><br>
+                    <br>
+                </div>
+                  <div class="card-action">
+                    <button type="sumbit" name="button">Submit</button>
+                  </form>
+                </div>
+              </div>
+          </div>
+        </div>
   </div>
+
+
+
+
   </body>
 </html>
