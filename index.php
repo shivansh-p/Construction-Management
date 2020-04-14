@@ -20,10 +20,10 @@
         <div class="col s6 m6">
           <div class="card white darken-1">
             <div class="card-content black-text">
-              <span class="card-title">Want to add a new Substructure? </span>
+              <span class="card-title">Want to add a new Activity? </span>
             </div>
             <div class="card-action">
-              <a href="addSubstructure.html"><b>Click here to Add Substructure</b></a>
+              <a href="addSubstructure.html"><b>Click here to Add Activity</b></a>
             </div>
           </div>
         </div>

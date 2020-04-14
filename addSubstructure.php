@@ -6,19 +6,25 @@ $Name = $_POST['Name'];
 $Start_Date = $_POST['Start_Date'];
 $Total_Days = $_POST['Total_Days'];
 
+
+$Quantity =$_POST['Quantity'];
+$Labour_Rate= $_POST['Labour_Rate'];
+$Machine_Rate= $_POST['Machine_Rate'];
+
 echo "$Name ";
 
 
-$query= "insert into projectschedule ( Name, Start_Date, Total_Days )
-	VALUES ('$Name','$Start_Date', '$Total_Days' )";
+$query= "insert into newprojectschedule ( Name, Start_Date, Total_Days,Quantity,Labour_Rate,Machine_Rate )
+	VALUES ('$Name','$Start_Date', '$Total_Days','$Quantity','$Labour_Rate','$Machine_Rate' )";
 $result = mysqli_query($conn, $query);
-
-$query2= "select SubstructureID from projectschedule where Name= '$Name' ";
-$result2= mysqli_query($conn, $query2);
-if (!$result2) {
+if (!$result) {
     printf("Error: %s\n", mysqli_error($conn));
     exit();
 }
+
+$query2= "select SubstructureID from newprojectschedule where Name= '$Name' ";
+$result2= mysqli_query($conn, $query2);
+
 $row = mysqli_fetch_array($result2);
 $id= $row['SubstructureID'];
 
@@ -48,7 +54,7 @@ if (!$result4) {
 
 
 	mysqli_close($conn);
-//header("Location: index.php");
+header("Location: index.php");
 
 
 ?>
