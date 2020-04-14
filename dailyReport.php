@@ -5,7 +5,7 @@ $Name = $_POST['substructureInput'];
 $Date = $_POST['DateInput'];
 $workDone=$_POST['ActualWork'];
 
-$query="select SubstructureID from projectschedule where Name='$Name'";
+$query="select SubstructureID from newprojectschedule where Name='$Name'";
 $result=mysqli_query($conn,$query);
 
 $row=mysqli_fetch_array($result);

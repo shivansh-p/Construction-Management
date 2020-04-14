@@ -40,7 +40,7 @@ if (!$result4) {
 //  $date = strtotime("+1 day", strtotime("2007-02-28"));
 // echo date("Y-m-d", $date);
  $date= $Start_Date;
- $IdealWork= 100/$Total_Days;
+ $IdealWork= $Quantity/$Total_Days;
  for ($x = 1; $x <= $Total_Days; $x++)
  {
 

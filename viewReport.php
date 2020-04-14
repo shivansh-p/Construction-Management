@@ -1,5 +1,4 @@
 <?php
-
 include 'DatabaseConnection.php';
 ?>
 <html>
@@ -12,7 +11,7 @@ include 'DatabaseConnection.php';
 
 $Name=$_POST['substructurename'];
 
-$query1="select SubstructureID from projectschedule where Name='$Name' ";
+$query1="select SubstructureID from newprojectschedule where Name='$Name' ";
 $result1=mysqli_query($conn,$query1);
 
 $row=mysqli_fetch_array($result1);
@@ -34,7 +33,7 @@ echo "<table border='1'>
 <th>Date</th>
 <th>Scheduled Work</th>
 <th>Actual Work</th>
-<th>Progress</th>
+<th>Day Progress(%)</th>
 </tr>
 ";
 // echo " Date : " . $row["Date"]. "- ScheduledWork : " . $row["IdealWork"].
