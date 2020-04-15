@@ -9,17 +9,17 @@ include 'DatabaseConnection.php';
 #$row1=mysqli_fetch_array($result1);
 #$id=$row['SubstructureID'];
 //$id=1;
-echo "ID"+$id;
-$query="select * from workreport where SubstructureID='$id' ";
-$result=mysqli_query($conn,$query);
 
-$row = $result->fetch_assoc();
+$query4="select * from workreport where SubstructureID='$id' ";
+$result4=mysqli_query($conn,$query4);
+
+$row = $result4->fetch_assoc();
 $days=0;
 $sumActualWork=0;
 while($row["ActualWork"]>0) {
   $days=$days+1;
   $sumActualWork=$sumActualWork+$row["ActualWork"];
-  $row = $result->fetch_assoc();
+  $row = $result4->fetch_assoc();
 }
 
 $query3="select * from newprojectschedule where SubstructureID='$id'";

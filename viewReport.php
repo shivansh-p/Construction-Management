@@ -43,7 +43,7 @@ echo "<table border='1'>
 <button onclick="optimizebtn()"  >Click here to Optimize</button>
 <div id="optimize" style="display:none;">
   <?php
-  echo "ID"+$id;
+  
   include 'calculations.php';?>
 </div>
 <script>
