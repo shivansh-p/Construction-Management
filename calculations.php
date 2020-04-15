@@ -9,7 +9,7 @@ include 'DatabaseConnection.php';
 #$row1=mysqli_fetch_array($result1);
 #$id=$row['SubstructureID'];
 //$id=1;
-if($Name=="Earthwork")
+if(mb_strtolower($Name)=="earthwork")
 {
   $query4="select * from workreport where SubstructureID='$id' ";
   $result4=mysqli_query($conn,$query4);

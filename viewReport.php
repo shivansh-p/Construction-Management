@@ -60,7 +60,7 @@ else
 {
     echo "<style> .c {background-color: #33cc00;}</style>";
 }
-echo "Substructure Total Progress - ". $progress ."%";
+echo "Activity Progress - ". round($progress,2) ."%";
 echo "</div>";
 
 
