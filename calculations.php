@@ -8,14 +8,14 @@ include 'DatabaseConnection.php';
 
 #$row1=mysqli_fetch_array($result1);
 #$id=$row['SubstructureID'];
-$id=7;
-
+//$id=1;
+echo "ID"+$id;
 $query="select * from workreport where SubstructureID='$id' ";
 $result=mysqli_query($conn,$query);
 
 $row = $result->fetch_assoc();
 $days=0;
-$sumActualWork=0
+$sumActualWork=0;
 while($row["ActualWork"]>0) {
   $days=$days+1;
   $sumActualWork=$sumActualWork+$row["ActualWork"];

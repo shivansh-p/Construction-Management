@@ -5,7 +5,7 @@ include 'DatabaseConnection.php';
   <head>
   <link rel="stylesheet" type="text/css" href="main.css">
 </head>
-</html>
+
 <?php
 
 
@@ -36,8 +36,31 @@ echo "<table border='1'>
 <th>Lag</th>
 </tr>
 ";
-// echo " Date : " . $row["Date"]. "- ScheduledWork : " . $row["IdealWork"].
-//  "- Actual Work : ". $row["ActualWork"]. "- Progress : ". $row["Progress"]. "<br>";
+?>
+
+<!-- Optimize Button and div -->
+
+<button onclick="optimizebtn()"  >Click here to Optimize</button>
+<div id="optimize" style="display:none;">
+  <?php
+  echo "ID"+$id;
+  include 'calculations.php';?>
+</div>
+<script>
+    function optimizebtn() {
+      var x = document.getElementById("optimize");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+
+      } else {
+        x.style.display = "none";
+      }
+    }
+</script>
+
+
+<?php
+
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
@@ -52,3 +75,4 @@ if ($result->num_rows > 0) {
     echo "0 results";
 }
 ?>
+</html>
