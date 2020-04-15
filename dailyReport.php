@@ -32,7 +32,7 @@ $row3=mysqli_fetch_array($result3);
 $idealWork=$row3['IdealWork'];
 
 //$progress=(($workDone-$idealWork)*100)/$idealWork;
-$progress=100*$workDone/$idealWork;
+$progress=$idealWork-$workDone;
 $query4="update workreport set Progress='$progress'
 where SubstructureID='$id' and Date='$Date' ";
 echo "Ideal work : $idealWork Workdone: $workDone ok ok ";

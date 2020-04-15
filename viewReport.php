@@ -33,7 +33,7 @@ echo "<table border='1'>
 <th>Date</th>
 <th>Scheduled Work</th>
 <th>Actual Work</th>
-<th>Day Progress(%)</th>
+<th>Lag</th>
 </tr>
 ";
 // echo " Date : " . $row["Date"]. "- ScheduledWork : " . $row["IdealWork"].
